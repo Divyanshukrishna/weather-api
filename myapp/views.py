@@ -7,7 +7,8 @@ def home(request):
     data={}
     if request.method == 'POST':
         city = request.POST['city']
-        source = urllib.request.urlopen('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric&appid=7e78767fc65fdb0b6643f2d2b1f581dc').read()
+        lang = request.POST['lang']
+        source = urllib.request.urlopen('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric&lang=' + lang + '&appid=7e78767fc65fdb0b6643f2d2b1f581dc').read()
         list_of_data=json.loads(source)
         data={
             "country_code":str(list_of_data['sys']['country']),

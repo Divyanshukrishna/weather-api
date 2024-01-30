@@ -9,9 +9,11 @@
     integrity="sha512-dQLT/B7byn2LjN/DN4zeBKpwGV6qbidV0XiMRWQOL7TGrV7FkZFldkGG+DGMU+CQnMTcRZlUI7GMWt1j6akNew=="
     crossorigin="anonymous" />
   <title>Weather App </title>
+
 </head>
 
 <body>
+
   <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
     <div class="container">
       <a href="{% url "home" %}" class="navbar-brand">Weather App <span style="color: rgb(39, 117, 161);"> <strong> - Django
@@ -35,6 +37,7 @@
       <div class=" input-group">
 
       <input type="text" class="form-control" name="city" placeholder="Choose Your City ...">
+      <input type="text" class="form-control" name="lang" placeholder="Choose Your Lang ...">
       <div class="input-group-btn">
         <button type="submit" class="btn btn-primary">Search</button>
       </div>
